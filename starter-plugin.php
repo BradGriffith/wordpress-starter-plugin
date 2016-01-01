@@ -13,20 +13,20 @@
  */
 
 // Load Advanced Custom Fields configuration
-if ( ! defined( 'USE_LOCAL_ACF_CONFIGURATION' ) || ! USE_LOCAL_ACF_CONFIGURATION ) {
-  require_once dirname( __FILE__ ) . '/advanced-custom-fields.php';
+if (!defined('USE_LOCAL_ACF_CONFIGURATION') || !USE_LOCAL_ACF_CONFIGURATION) {
+	require_once dirname(__FILE__) . '/advanced-custom-fields.php';
 }
 
-class Starter_Plugin {
+class StarterPlugin {
 
-  /**
-   * Class constructor
-   */
-  public function __construct() {
-    // This would be a good place to call methods you put in this class
-  }
+	/**
+	 * Class constructor
+	 */
+	public function __construct() {
+		// This would be a good place to call methods you put in this class
+	}
 
-  // Add methods to register custom post types, taxonomies, etc. here
+	// Add methods to register custom post types, taxonomies, etc. here
 
 }
 
@@ -34,8 +34,8 @@ class Starter_Plugin {
  * Bootstrap the plugin
  * @return void
  */
-function starter_plugin_init() {
-  $GLOBALS['starter_plugin'] = new Starter_Plugin;
-  return;
+function starterPluginInit() {
+	$GLOBALS['starter_plugin'] = new StarterPlugin;
+	return;
 }
-add_action( 'init', 'starter_plugin_init' );
+add_action('init', 'starterPluginInit');
